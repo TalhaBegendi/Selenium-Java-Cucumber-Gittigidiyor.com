@@ -37,7 +37,7 @@ public class TestClass  {
     {
         pageClick loginİslemleri= new pageClick(Webdriver);
         loginİslemleri.LoginEkranıGiris();
-        loginİslemleri.EpostaGiris("talhabegendi");
+        loginİslemleri.EpostaGiris("********");
         loginİslemleri.SifreGiris("******");
         loginİslemleri.GirisYapButtonTikla();
     }
