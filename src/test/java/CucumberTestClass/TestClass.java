@@ -38,7 +38,7 @@ public class TestClass  {
         pageClick loginİslemleri= new pageClick(Webdriver);
         loginİslemleri.LoginEkranıGiris();
         loginİslemleri.EpostaGiris("talhabegendi");
-        loginİslemleri.SifreGiris("1ac1e285");
+        loginİslemleri.SifreGiris("******");
         loginİslemleri.GirisYapButtonTikla();
     }
     @And("^Arama kutucuguna iphone11 yazilir ve bul buttonu tiklanir.$")
