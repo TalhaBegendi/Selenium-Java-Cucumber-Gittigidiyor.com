@@ -15,9 +15,9 @@ public class pageXpaths {
     @CacheLookup public static  By araKutusu =By.className("iYMTpq");
     @CacheLookup public static  By bulButton =By.className("hKfdXF");
     @CacheLookup public static  By sayfa2 =By.cssSelector("div.gg-d-24>ul.clearfix>li:nth-child(2)>a");
-    @CacheLookup public static  By urun =By.id("product_id_649258698");
+    @CacheLookup public static  By urun =By.id("product_id_622134853");
 
-    @CacheLookup public static  By popUpKapat =By.className("wis-clsbtn-71729");
+    @CacheLookup public static  By popUpKapat =By.className("wis-clsbtn-72245");
     @CacheLookup public static  By altMesajKapat =By.className("icon-close");
 
 

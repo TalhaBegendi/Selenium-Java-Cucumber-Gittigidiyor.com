@@ -1,42 +1,56 @@
 package assertVisible;
 
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class assertVisible extends assertXpath {
+public class assertVisible extends assertBaseClass{
 
-    WebDriver webDriver;
-    WebElement fiyat1;
-    WebElement fiyat2;
-    String a;
-    String b;
     public assertVisible(WebDriver driver)
     {
-
-        this.webDriver = driver;
+        super (driver);
     }
-    public Boolean FiyatKiyaslama() throws Exception
+    public Boolean Anasayfa_Assert()
     {
-
-        WebDriverWait wait = new WebDriverWait(webDriver, 10);
-        fiyat1 = wait.until(ExpectedConditions.visibilityOfElementLocated(urunDetayFiyat));
-        a=fiyat1.getText();
-        return fiyat1.isDisplayed();
+        ElementVisible(anasayfaKontrol);
+        return element.isDisplayed();
     }
-    public Boolean FiyatKiyaslama2()
+    public Boolean Login_Assert()
     {
-        WebDriverWait wait = new WebDriverWait(webDriver, 10);
-        fiyat2 = wait.until(ExpectedConditions.visibilityOfElementLocated(urunSepetFiyat));
-        b=fiyat2.getText();
-        return fiyat2.isDisplayed();
+        ElementVisible(loginKontrol);
+        return element.isDisplayed();
     }
-    public void FiyatKiyaslamaXXX() //throws Exception
+    public Boolean Sayfa2_Assert()
     {
-        System.out.println("a degeri "+a);
-        System.out.println("b degeri "+b);
-        Assert.assertEquals(a,b);
+        ElementVisible(sayfa2Kontrol);
+        return element.isDisplayed();
+    }
+    public Boolean SepetimUrunArtır_Assert()
+    {
+        ElementVisible(sepetimUrunArtırKontrol);
+        return element.isDisplayed();
+    }
+    public Boolean UrunDetayFiyat_Assert()
+    {
+        ElementVisible(urunDetayFiyat);
+        textDetayFiyat=element.getText();
+        return element.isDisplayed();
+    }
+    public Boolean UrunSepetFiyat_Assert()
+    {
+        ElementVisible(urunSepetFiyat);
+        textSepetFiyat=element.getText();
+        return element.isDisplayed();
+    }
+    public Boolean UrunSepettenKaldir_Assert()
+    {
+        ElementCount(urunSepetKaldirKontrol);
+        return true;
+    }
+    public void Sepet_FiyatKarsilastirma() throws Exception
+    {
+        System.out.println("sepet "+textDetayFiyat);
+        System.out.println("detay "+textSepetFiyat);
+        Assert.assertEquals(textDetayFiyat,textSepetFiyat);
     }
 }

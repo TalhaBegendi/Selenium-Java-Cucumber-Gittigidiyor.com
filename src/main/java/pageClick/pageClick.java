@@ -21,6 +21,7 @@ public class pageClick extends pageBaseClass {
         elementSendKey.sendKeys(sifre);
     }
     public void GirisYapButtonTikla() {
+
         ElementClick(girisYapButton);
     }
     public void UrunAra(String urun) {
@@ -28,6 +29,7 @@ public class pageClick extends pageBaseClass {
         elementSendKey.sendKeys(urun);
     }
     public void BulButtonTikla() {
+
         ElementClick(bulButton);
     }
     public void Sayfa2Git() {
@@ -36,18 +38,22 @@ public class pageClick extends pageBaseClass {
     }
     public void UrunTikla() {
         ElementClick(urun);
-        //ElementClick(popUpKapat);
+        ElementClick(popUpKapat);
     }
     public void UrunSepetEkle() {
+
         ElementClick(sepeteEkle);
     }
     public void Sepetim() {
+
         ElementClick(sepetim);
     }
     public void SepetimUrunArtır() {
+
         ElementClick(sepetimUrunArtır);
     }
     public void SepetimUrunSil() {
+
         ElementClick(sepetimUrunSil);
     }
 }

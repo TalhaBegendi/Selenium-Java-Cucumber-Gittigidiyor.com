@@ -6,12 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class assertBaseClass {
+
+public class assertBaseClass extends assertXpath {
 
 
     WebDriver webDriver;
-    WebElement fiyat1;
-    WebElement fiyat2;
+    WebElement element;
+    String textDetayFiyat,textSepetFiyat;
+    Boolean elementCount;
 
     public assertBaseClass(WebDriver driver)
     {
@@ -20,11 +22,11 @@ public class assertBaseClass {
     public void ElementVisible(By Element)
     {
         WebDriverWait wait = new WebDriverWait(webDriver, 10);
-        fiyat1 = wait.until(ExpectedConditions.visibilityOfElementLocated(Element));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(Element));
     }
-    public void ElementVisible2(By Element)
+    public void ElementCount(By Element)
     {
         WebDriverWait wait = new WebDriverWait(webDriver, 10);
-        fiyat2 = wait.until(ExpectedConditions.visibilityOfElementLocated(Element));
+        elementCount = wait.until(ExpectedConditions.invisibilityOfElementLocated(Element));
     }
 }
