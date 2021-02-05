@@ -42,7 +42,11 @@ public class TestClass  {
     {
         pageClick loginİslemleri= new pageClick(Webdriver);
         loginİslemleri.LoginEkranıGiris();
+<<<<<<< HEAD
         loginİslemleri.EpostaGiris("*****");
+=======
+        loginİslemleri.EpostaGiris("********");
+>>>>>>> 6205548a1bc1708e9769052be363906118c83aee
         loginİslemleri.SifreGiris("******");
         loginİslemleri.GirisYapButtonTikla();
     }
@@ -106,6 +110,7 @@ public class TestClass  {
         pageClick urunSepettenSil= new pageClick(Webdriver);
         urunSepettenSil.SepetimUrunSil();
     }
+<<<<<<< HEAD
     @And("^Urun sepetten silinerek sepetin bos oldugu gorulur.$")
     public  void UrunSepettenKaldir_Assert()
     {
@@ -113,3 +118,6 @@ public class TestClass  {
         urunSepettenKaldirKontrol.UrunSepettenKaldir_Assert();
     }
 }
+=======
+}
+>>>>>>> 6205548a1bc1708e9769052be363906118c83aee
