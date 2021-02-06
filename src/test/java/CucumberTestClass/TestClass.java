@@ -21,7 +21,7 @@ public class TestClass  {
     @Given("^Chrome baslatilir.$")
     public  void Chromeİslemleri()
     {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/Talha BEĞENDİ/Documents/Selenium/ChromeDriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
         Webdriver = new ChromeDriver();
         Webdriver.manage().window().maximize();
     }
