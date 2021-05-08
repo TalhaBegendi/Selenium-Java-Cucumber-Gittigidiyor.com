@@ -24,7 +24,7 @@ public class pageXpaths {
 
     @CacheLookup public static By sepeteEkle = By.id("add-to-basket");
     @CacheLookup public static By sepetim = By.className("basket-icon-container");
-    @CacheLookup public static By sepetimUrunArtır = By.xpath("//select[@class='amount']/option[2]");
+    @CacheLookup public static By sepetimUrunArtır = By.cssSelector("select.amount>option:nth-child(2)");
     @CacheLookup public static By sepetimUrunSil = By.cssSelector("div.row>a.btn-update-item >i.gg-icon-bin-medium");
 
 }
